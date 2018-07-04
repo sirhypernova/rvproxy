@@ -1,0 +1,28 @@
+{
+  "name": "reverse-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SirHyperNova",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.0",
+    "connect-sqlite3": "^0.9.11",
+    "deasync": "^0.1.13",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-http-proxy": "^1.2.0",
+    "express-session": "^1.15.6",
+    "helmet": "^3.12.1",
+    "ip": "^1.1.5",
+    "is-port-available": "^0.1.5",
+    "klaw": "^2.1.1",
+    "p-col": "^1.0.2",
+    "pcol-sqlite": "^1.0.1",
+    "sqlite3po": "^1.5.0",
+    "through2": "^2.0.3"
+  }
+}

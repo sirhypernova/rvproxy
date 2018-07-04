@@ -1,0 +1,25 @@
+<% include ../partials/head %>
+    <% include ../partials/navbar %>
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-md-12">
+                <h3><%= name %> <small class="text-muted">New Proxy</small></h3>
+                <% if (error) { %>
+                    <h5 class="text-danger">Error: <%= error %></h5>
+                <% } %>
+                <hr>
+                <form method="post" class="col-md-8">
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input class="form-control" type="number" name="from" id="from" min="1" max="65536" placeholder="Port From">
+                    </div>
+                    <div class="form-group">
+                        <label for="to">Username</label>
+                        <input class="form-control" type="number" name="to" id="to" min="1" max="65536" placeholder="Port To">
+                    </div>
+                    <button type="submit" class="btn btn-primary my-2">Submit</button>
+                </form>
+            </div>
+        </div>  
+    </div>
+<% include ../partials/footer %>

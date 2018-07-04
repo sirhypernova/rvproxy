@@ -1,0 +1,12 @@
+<ul class="list-group">
+<% for (var proxy of proxydb.array()) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= proxy.from %> &raquo; <%= proxy.to %>
+            <div>
+                <a href="/delete/<%= proxy.to %>" class="btn btn-danger">Delete</a>
+                <a href="http://<%= ip %>:<%= proxy.to %>" target="_blank" class="btn btn-success<%= !proxies.exists(proxy.to) ? ' disabled' : '' %>">Open</a>
+                <a href="/toggleproxy/<%= proxy.to %>" class="btn btn-<%= proxies.exists(proxy.to) ? 'warning' : 'info' %>"><%= proxies.exists(proxy.to) ? 'Stop' : 'Start' %></a>
+            </div>
+        </li>
+<% } %>
+</ul>

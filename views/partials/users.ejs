@@ -1,0 +1,10 @@
+<ul class="list-group">
+<% users.forEach(u => { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= u.username %>
+            <div>
+                <a href="/admin/deleteuser/<%= u.id %>" class="btn btn-danger<%= user.id == u.id || u.admin ? ' disabled' : '' %>">Delete</a>
+                <a href="/admin/users/<%= u.id %>" class="btn btn-primary">Modify</a>
+            </div>
+        </li>
+<% }); %>
